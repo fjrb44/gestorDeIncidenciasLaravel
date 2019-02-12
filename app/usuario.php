@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class usuario extends Model
+class Usuario extends Model
 {
     //
     public function ticket(){
-        return $this->hasMany("App\ticket");
+        return $this->hasMany("App\Ticket");
     }
 }
