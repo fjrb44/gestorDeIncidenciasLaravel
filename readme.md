@@ -7,13 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 <p>
-    Tablas:
+    <strong>Tablas:</strong>
 </p>
 <p>
     usuario (id, nombre, password, administrador[ boolean ])
 </p>
 <p>
-    ticket (id, title, status, updates, id_categoria, id_usuario, id_nombre)
+    ticket (id, title, mensaje, status, updates, id_categoria, id_usuario, id_nombre)
 </p>
 <p>
     categoria (id, nombre)
@@ -22,7 +22,7 @@
     priority (id, nombre)
 </p>
 <p>
-    Relaciones:
+    <strong>Relaciones:</strong>
 </p>
 <p>
     usuario 1:N ticket
@@ -34,7 +34,7 @@
     ticket N:1 priority
 </p>
 <p>
-    Enlaces: 
+    <strong>Enlaces:</strong>
 </p>
 <p>
     /new_ticket (Formulario para crear un nuevo ticket)

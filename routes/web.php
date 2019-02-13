@@ -11,18 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
+Route::get('/new_ticket', 'TicketController@index');
+Route::post('/new_ticket', 'TicketController@create');
+
+//Admin routes
+Route::get('/admin/tickets', 'AdminController@index');
+Route::post('/admin/close_ticket/{ticket_id}', 'AdminController@index');
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');

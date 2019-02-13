@@ -78,6 +78,24 @@
                     @endauth
                 </div>
             @endif
+            <form action="#" method="POST">
+                @csrf
+                <p>
+                    <input type="text" placeholder="title">
+                </p>
+                <p>
+                    <input type="text" placeholder="prioridad">
+                </p>
+                <p>
+                    <input type="textarea" placeholder="mensaje">
+                </p>
+                <p>
+                    <button type="submit">
+                        Enviar
+                    </button>
+                </p>
+            </form>
         </div>
+
     </body>
 </html>

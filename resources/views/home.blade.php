@@ -15,6 +15,9 @@
                     @endif
 
                     You are logged in!
+                    <p>
+                        <a href="./new_ticket">Create a new Ticket</a>
+                    </p>
                 </div>
             </div>
         </div>
