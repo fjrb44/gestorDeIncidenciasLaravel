@@ -6,22 +6,48 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-
-Tablas:
-
-usuario (id, nombre, password, administrador[ boolean ])
-ticket (id, title, status, updates, id_categoria, id_usuario, id_nombre)
-categoria (id, nombre)
-priority (id, nombre)
-
-Relaciones: 
-usuario 1:N ticket
-ticket N:1 categoria
-ticket N:1 priority
-
-Enlaces: 
-/new_ticket (Formulario para crear un nuevo ticket)
-/my_tickets (Vista para ver todos tus tickets)
-/tickets/{ticket_id} (Muestra el ticket con el id indicado)
-/admin/tickets (Para los usuarios administradores, ven todos los tickets y pueden cerrarlos)
-/admin/close_ticket/{ticket_id} (Si eres administrador, cierra el ticket con el id)
+<p>
+    Tablas:
+</p>
+<p>
+    usuario (id, nombre, password, administrador[ boolean ])
+</p>
+<p>
+    ticket (id, title, status, updates, id_categoria, id_usuario, id_nombre)
+</p>
+<p>
+    categoria (id, nombre)
+</p>
+<p>
+    priority (id, nombre)
+</p>
+<p>
+    Relaciones:
+</p>
+<p>
+    usuario 1:N ticket
+</p>
+<p>
+    ticket N:1 categoria
+</p>
+<p>
+    ticket N:1 priority
+</p>
+<p>
+    Enlaces: 
+</p>
+<p>
+    /new_ticket (Formulario para crear un nuevo ticket)
+</p>
+<p>
+    /my_tickets (Vista para ver todos tus tickets)
+</p>
+<p>
+    /tickets/{ticket_id} (Muestra el ticket con el id indicado)
+</p>
+<p>
+    /admin/tickets (Para los usuarios administradores, ven todos los tickets y pueden cerrarlos)
+</p>
+<p>
+    /admin/close_ticket/{ticket_id} (Si eres administrador, cierra el ticket con el id)
+</p>
