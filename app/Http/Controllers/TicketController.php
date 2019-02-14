@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ticket;
+//use App\ticket;
 use Illuminate\Http\Request;
+use App\Categoria;
+use App\Ticket;
 
 class TicketController extends Controller
 {
@@ -15,7 +17,11 @@ class TicketController extends Controller
 
     public function index()
     {
-        return view("crearTicket");
+        $tickets = Ticket::paginate(10);
+
+        $categorias = Categoria::all();
+
+        return view("crearTicket", compact("tickets", "categorias"));
     }
 
     public function create()
@@ -77,5 +83,9 @@ class TicketController extends Controller
     public function destroy(ticket $ticket)
     {
         //
+    }
+
+    public function adminIndex(){
+        return ("hola");
     }
 }
