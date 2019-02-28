@@ -16,9 +16,14 @@ Auth::routes();
 Route::get('/new_ticket', 'TicketController@index');
 Route::post('/new_ticket', 'TicketController@create');
 
+Route::get('/my_tickets', 'TicketController@misTickets');
+Route::get('/my_tickets/{ticket_id}', 'TicketController@miTicket');
+
 //Admin routes
-Route::get('/admin/tickets', 'TicketController@adminIndex')->middleware("admin");
-//Route::post('/admin/close_ticket/{ticket_id}', 'AdminController@index');
+Route::middleware(["admin"])->group(function() {
+    Route::get('/admin/tickets', 'TicketController@adminIndex');
+    Route::post('/admin/close_ticket/{ticket_id}', 'TicketController@close_ticket');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');

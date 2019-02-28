@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Session;
+use Illuminate\Support\Facades\Auth;
 
 class AdminMiddleware
 {
@@ -15,10 +17,10 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ( !auth()->user()->admin ) {
-            return route('home');
+        if ( auth()->user()->admin ) {  
+            return $next($request);
         }
-
-        return $next($request);
+        Session::flash('permisions', "Lo sentimos, pero no dispone de los permisos requeridos");
+        return redirect(route('home'));
     }
 }

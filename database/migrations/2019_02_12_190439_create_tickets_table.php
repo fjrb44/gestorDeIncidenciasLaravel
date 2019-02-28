@@ -18,15 +18,15 @@ class CreateTicketsTable extends Migration
 
             //Relaciones
             $table->integer("priority_id");
-            $table->foreign('priority_id')->references('id')->on('priority')
+            $table->foreign('priority_id')->references('id')->on('priorities')
                 ->onUpdate("cascade")->onDelete("cascade");
 
             $table->integer("categoria_id");
-            $table->foreign('categoria_id')->references('id')->on('categoria')
+            $table->foreign('categoria_id')->references('id')->on('categorias')
                 ->onUpdate("cascade")->onDelete("cascade");
 
-            $table->integer("usuario_id");
-            $table->foreign('usuario_id')->references('id')->on('usuario')
+            $table->integer("user_id");
+            $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate("cascade")->onDelete("cascade");
         });
     }

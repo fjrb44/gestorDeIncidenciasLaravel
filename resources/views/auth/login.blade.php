@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="content">
+    @if(Session::has('permisions'))
+        <div class="alert alert-danger">
+            {{Session::get('permisions')}}
+        </div>
+    @endif
     <div class="row justify-content-center">
+        
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
